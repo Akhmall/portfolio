@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M.AKHMAL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelector(".loader").classList.add("loader--hidden");
+          document.body.style.overflow = "unset";
+        }, 2000);
+      });
+    </script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="loader">
+      <ul>
+        <li></li>
+      </ul>
+      <div class="cup"><span></span></div>
+    </div>
+
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"><span>Portfolio</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Saya</a>
+        <a href="#menu">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="navbar-extra"></div>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>M.AKHMAL<span></span></h1>
+        <p>Programming</p>
+        <a href="#" class="cta">Visit Profile</a>
+      </main>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#93683c"
+        fill-opacity="0.5"
+        d="M0,288L34.3,266.7C68.6,245,137,203,206,165.3C274.3,128,343,96,411,85.3C480,75,549,85,617,117.3C685.7,149,754,203,823,192C891.4,181,960,107,1029,106.7C1097.1,107,1166,181,1234,197.3C1302.9,213,1371,171,1406,149.3L1440,128L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+      ></path>
+    </svg>
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Saya</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="{{ url_for('static', filename='img/saya.jpeg') }}" alt="Tentang saya" />
+        </div>
+        <div class="content">
+          <h3>Kenapa Saya Memilih Programming</h3>
+          <p>
+            Sejak kecil, saya selalu tertarik dengan cara sesuatu bekerja,
+            terutama teknologi. Rasa penasaran itu berkembang seiring dengan
+            pesatnya perkembangan teknologi, yang mendorong saya untuk memilih
+            jalur programming sebagai karier. Programming bukan hanya sekedar
+            menulis kode; ini adalah seni dalam menciptakan solusi yang efisien
+            dan kreatif untuk berbagai masalah di dunia nyata. Salah satu alasan
+            utama saya memilih programming adalah karena fleksibilitasnya.
+            Dengan kemampuan untuk membangun aplikasi, website, dan sistem, saya
+            merasa memiliki kebebasan untuk mewujudkan ide-ide kreatif saya dan
+            memberikan dampak positif bagi masyarakat. Selain itu, programming
+            memberikan tantangan intelektual yang terus memacu saya untuk
+            belajar hal baru dan meningkatkan kemampuan problem-solving. Di
+            dunia yang semakin terdigitalisasi, programming menjadi keterampilan
+            yang sangat dibutuhkan. Saya melihat programming sebagai jembatan
+            untuk masa depan, di mana inovasi teknologi akan terus memainkan
+            peran penting. Selain itu, programming memungkinkan saya untuk
+            berkolaborasi dengan orang-orang dari berbagai latar belakang,
+            membangun jaringan profesional, dan belajar dari komunitas global.
+            Hal ini tidak hanya memperkaya keterampilan teknis saya, tetapi juga
+            membantu saya berkembang secara pribadi. Secara keseluruhan,
+            programming adalah pilihan karier yang memenuhi rasa ingin tahu
+            saya, memberi saya tantangan yang menarik, serta memungkinkan saya
+            untuk berkreasi dan berinovasi di dunia yang terus berubah.
+          </p>
+          <br />
+          <a href="#" class="ctn">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <h2><span>Pengalaman</span> Saya</h2>
+      <p>what i am great at</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 card-spacing">
+            <div class="card" style="width: 8rem">
+              <img src="{{ url_for('static', filename='img/foto.png') }}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">Creative Design</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 card-spacing">
+            <div class="card" style="width: 8rem">
+              <img src="{{ url_for('static', filename='img/foto1.png') }}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">UI/UX Design</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 card-spacing">
+            <div class="card" style="width: 8rem">
+              <img src="{{ url_for('static', filename='img/foto2.png') }}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">Web Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 card-spacing">
+            <div class="card" style="width: 8rem">
+              <img src="{{ url_for('static', filename='img/foto3.png') }}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">Marketing</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more columns as needed -->
+        </div>
+      </div>
+    </section>
+
+    <secttion id="contact" class="contact">
+      <h2><span>Contact</span> Me</h2>
+      <p>how can you communicate?</p>
+
+      <div class="row">
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="email" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="number" placeholder="Phone" />
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Comment" />
+          </div>
+          <button type="submit" class="BSI">Kirim</button>
+        </form>
+      </div>
+    </secttion>
+
+    <footer>
+      <div class="sosials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Saya</a>
+        <a href="#menu">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">M.AKHMAL</a>. | &copy; 2024.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
